@@ -206,10 +206,11 @@ fill: var(--accent-color);
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.pref-flex {
+.list {
     display: flex;
+    justify-content: center;
     }
-.preference-title {
+.preference__subtitle {
     margin-top: 30px;    
     font-weight: 700;
         font-size: 14px;
@@ -217,13 +218,14 @@ fill: var(--accent-color);
         letter-spacing: 0.03em;
         text-transform: uppercase
         }
-.pref-item {
+.preference__item {
     width: 270px;
-}
-.pref-item:not(:last-child) {
+    }
+.preference__item:not(:last-child) {
     margin-right: 30px;
 }
-.preference-icon {
+
+.preference__icon {
     align-items: center;
     height: 120px;
     display: flex;
@@ -231,7 +233,7 @@ fill: var(--accent-color);
     background: #F5F4FA;
     border-radius: 4px;
 }
-.preference-info {
+.preference__text {
     margin-top: 10px;
     
     font-weight: 400;
@@ -241,32 +243,33 @@ fill: var(--accent-color);
         color: var(--second-text-color);
 }
 /* Work */
-.section-work {
+.work {
 padding-top: 0;
 }
-.work-logo {
-    
-    margin-bottom: 50px;
+.title {     
     text-align: center;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;}
- .work-cont {
-    display: flex;
-    }
-.work-photo:not(:last-child) {
+
+.title__list {
+    margin-bottom: 50px;
+}
+ 
+.work__item:not(:last-child) {
     margin-right: 30px;
 }
-.work-photo {
+.work__item {
 position: relative;
 }
-.description {
+.static-overlay {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 370px;
-    height: 70px;
-    
+    height: 70px;}
+ 
+.static-overlay__text{
 font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -274,14 +277,16 @@ font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 color: #FFFFFF;
-background: rgba(47, 48, 58, 0.8);
+background: rgba(47, 48, 58, 0.8);}
+
+.work__static-overlay {
 position: absolute;
 bottom: 0;
-left: 0;
-}
+left: 0;}
+
 
 /* Team */
-.section-team {
+.team {
         background-color: #F5F4FA;
     }
 .team-logo {
@@ -295,16 +300,16 @@ left: 0;
     display: flex;
     justify-content: center;
 }
-.team-card {
+.card {
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
 }
-.team-card:not(:last-child) {
+.card:not(:last-child) {
     margin-right: 30px;
 }
-.team-people {
+.card__squad {
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -312,15 +317,13 @@ left: 0;
 
     font-weight: 500;
 }
-.team-profession {
+.card__profession {
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 19px;
     color: var(--second-text-color);
 }
-.social-links-icon {
-    display: flex;
-    justify-content: center;
+.card__list {    
     margin-bottom: 30px;
 }
 .link {
@@ -355,20 +358,16 @@ text-align: center;
     font-size: 36px;
     line-height: 1.17;
 }
-.clients-cont {
-display: flex;
-justify-content: center;
-}
-.clients-card {
+.clients__card {
     display: flex;
 width: 170px;
     height: 92px;
     }
     
-.clients-card:not(:last-child) {
+.clients__card:not(:last-child) {
 margin-right: 30px;
 }
-.clients-link {
+.clients__link {
    width: 100%;
    height: 100%;
    align-items: center;
@@ -384,12 +383,12 @@ margin-right: 30px;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- .clients-link:hover, .clients-link:focus {
+ .clients__link:hover, .clients-link:focus {
     border-color: var(--accent-color);
     color: var(--accent-color);
  }
 
-.client-icon {
+.client__icon {
     fill: currentColor;
     
 }
@@ -797,9 +796,7 @@ margin-bottom: 30px;}
             line-height: 30px;
             letter-spacing: 0.06em;
 }
-.name-field {
-    
-}
+
 .form-icon {
     position: absolute;
     top: 50%;
@@ -835,7 +832,7 @@ margin-bottom: 30px;}
 .custom-checkbox {
     position: relative;
 }
-.custom-checkbox-icon {}
+
 .custom-checkbox-icon {
     fill: var(--white-color);
     position: absolute;
